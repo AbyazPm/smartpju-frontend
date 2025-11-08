@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "smart-pju-monitor-app",
+    "name": "Smart PJU Monitor",
     "slug": "smart-pju-monitor-app",
     "scheme": "smartpju",
     "version": "1.0.0",
@@ -13,16 +13,17 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
+      "package": "com.TRI.smartpjumonitorapp", 
+      "versionCode": 1,
+      "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.smartpjumonitorapp"
+      }
+    },
+    "ios": {
+      "supportsTablet": true
     },
     "web": {
       "bundler": "metro",
