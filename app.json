@@ -14,7 +14,7 @@
       "backgroundColor": "#ffffff"
     },
     "android": {
-      "package": "com.TRI.smartpjumonitorapp", 
+      "package": "com.TRI.smartpjumonitorapp",
       "versionCode": 1,
       "permissions": [],
       "adaptiveIcon": {
@@ -39,6 +39,12 @@
       "eas": {
         "projectId": "032e4795-2217-4c87-be15-8f961bfb7889"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/032e4795-2217-4c87-be15-8f961bfb7889"
     }
   }
 }
