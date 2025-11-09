@@ -36,12 +36,25 @@ export default function CctvLiveScreen() {
   // Load leaflet_map.html
   useEffect(() => {
     const loadHtml = async () => {
-      const asset = Asset.fromModule(require('../../assets/html/leaflet_map.html'));
-      await asset.downloadAsync();
-      const content = await FileSystem.readAsStringAsync(asset.localUri || asset.uri);
-    
-      setHtmlContent(content);
-    };
+  try {
+    const asset = Asset.fromModule(require('../../assets/html/leaflet_map.html'));
+    await asset.downloadAsync();
+
+    // Gunakan file path yang benar tergantung platform
+    let htmlUri = asset.localUri || asset.uri;
+
+    // Di Android, path biasanya `file:///android_asset/...`
+    if (htmlUri && !htmlUri.startsWith('file://')) {
+      htmlUri = FileSystem.bundleDirectory + 'assets/html/leaflet_map.html';
+    }
+
+    const content = await FileSystem.readAsStringAsync(htmlUri);
+    setHtmlContent(content);
+  } catch (error) {
+    console.error('❌ Gagal memuat HTML:', error);
+  }
+};
+
     loadHtml();
   }, []);
 
