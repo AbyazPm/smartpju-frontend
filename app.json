@@ -15,10 +15,7 @@
     },
     "android": {
       "package": "com.TRI.smartpjumonitorapp",
-      "versionCode": 1,
-
-      "permissions": ["INTERNET"],  
-
+      "permissions": ["INTERNET"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -43,10 +40,13 @@
         "projectId": "032e4795-2217-4c87-be15-8f961bfb7889"
       }
     },
-    "runtimeVersion": "1.0.0"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/032e4795-2217-4c87-be15-8f961bfb7889"
-    }
+    },
+    "assetBundlePatterns": [
+      "**/*",
+      "assets/html/*"
+    ]
   }
 }
