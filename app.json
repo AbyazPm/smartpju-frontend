@@ -16,11 +16,14 @@
     "android": {
       "package": "com.TRI.smartpjumonitorapp",
       "versionCode": 1,
-      "permissions": [],
+
+      "permissions": ["INTERNET"],  
+
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "edgeToEdgeEnabled": true
     },
     "ios": {
       "supportsTablet": true
