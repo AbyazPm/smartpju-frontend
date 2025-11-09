@@ -715,7 +715,12 @@
   const BACKEND_URL =
     "https://smartpju-backend-production.up.railway.app/api/cctv";
 
+    console.log("✅ leaflet_map.html loaded!");
+    window.ReactNativeWebView?.postMessage("HTML Loaded!");
+
+
   console.log("🔍 Fetching CCTV data from:", BACKEND_URL);
+  
 
   // 🔹 Ambil data CCTV
   fetch(BACKEND_URL)
